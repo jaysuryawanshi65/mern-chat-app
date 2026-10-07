@@ -1,0 +1,3 @@
+export default function MessageInputForm({ newMessage, setNewMessage, sendMessage, selectedUserId, connected }) {
+  return <form onSubmit={sendMessage} className="w-full px-4 md:px-7 py-3 bg-background"><div className="flex gap-2 rounded-2xl border border-white/10 bg-dark p-2"><input disabled={!selectedUserId || !connected} value={newMessage} onChange={e => setNewMessage(e.target.value)} placeholder={!selectedUserId ? "Select a person first" : connected ? "Write a message…" : "Connecting…"} className="flex-1 bg-transparent outline-none px-3 text-sm"/><button disabled={!selectedUserId || !connected || !newMessage.trim()} className="rounded-xl bg-primarySecond px-5 py-2 text-sm font-semibold disabled:opacity-40">Send</button></div></form>;
+}

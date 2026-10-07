@@ -1,0 +1,16 @@
+const express = require("express");
+const registerController = require("../controllers/registerController");
+const loginController = require("../controllers/loginController");
+const verifyEmail = require("../controllers/emailVerifyController");
+const { profileController, profileUpdate } = require("../controllers/profileController");
+const peopleController = require("../controllers/peopleController");
+const messageController = require("../controllers/messageController");
+const router = express.Router();
+router.post("/register", registerController);
+router.post("/login", loginController);
+router.get("/:id/verify/:token", verifyEmail);
+router.get("/profile", profileController);
+router.get("/messages/:userId", messageController);
+router.get("/people", peopleController);
+router.put("/profile/update", profileUpdate);
+module.exports = router;

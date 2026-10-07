@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+body { margin: 0; font-family: 'Archivo', sans-serif; background: #202329; color: white; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.squircle { border-radius: 22px; overflow: hidden; }
+.chat-scroll { scrollbar-width: thin; scrollbar-color: #3f4654 transparent; }
+
+@keyframes pulseDot { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
+.online-dot { animation: pulseDot 1.8s infinite; }

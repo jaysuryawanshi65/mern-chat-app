@@ -1,0 +1,1 @@
+export default function Footer() { return <footer className="border-t border-white/10 bg-dark"><div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between gap-3 text-sm text-gray-500"><span>© 2026 Swift-Chat. All Rights Reserved.</span><span>MERN + WebSockets</span></div></footer>; }
